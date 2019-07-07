@@ -1,0 +1,43 @@
+$blue: #005fcc;
+$white: #ffffff;
+$grey: #f3f4fb;
+$dark_grey: #2e2e2e;
+
+@media screen and (max-width: 456px) {
+
+  * {
+    color: $dark_grey;
+  }
+
+  .hero__right {
+    min-width: 375px;
+    
+    .right__img {  
+      background-image: url("../img/cover.png");
+      height: 249.5px;
+    }
+
+    .right__text {
+      top: -66.5px;
+      width: 330px;
+
+      h1 {
+        position: unset;
+        font-size: 1.5625rem;
+        width: 210px;
+        padding-top: 2.9375em;
+        margin: 0;
+      }
+
+      p{
+        font-size: 0.9375rem;
+        width: 249px;
+      }
+    }
+  }
+}
+
+
+
+
+

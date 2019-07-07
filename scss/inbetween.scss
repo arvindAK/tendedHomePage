@@ -1,0 +1,173 @@
+$blue: #005fcc;
+$white: #ffffff;
+$grey: #f3f4fb;
+$dark_grey: #2e2e2e;
+
+@media screen and (max-width: 1495px) {
+  .hero__right {
+    nav .nav {
+    width: 70%;
+    margin-left: 18%;
+  }
+
+    .right__more {
+      flex-direction: row;
+      bottom: 39.5px;
+      right: 39.8px;
+      width: 138.1px;
+      height: 21px;
+      justify-content: space-between;
+      align-items: baseline;
+
+      span {
+        transform: rotate(0deg);
+      }
+
+      svg{
+        width: 10.6px;
+        height: 15.08px;
+        position: relative;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    display: block;
+    height: 100%;
+
+    &__left {
+      display: none;
+    }
+
+    &__right {
+      background-color: $grey;
+      width: 100%;
+      min-height: 811px;
+
+      nav {
+        height: 104px;
+        background-color: $blue;
+        position: relative;
+
+        .nav__logo {
+          display: block;
+          height: 36px;
+          position: absolute;
+          top: 48px;
+          left: 45px;
+          z-index: 3;
+        }
+  
+        .hamburger {
+          display: inline-block;
+          position: absolute;
+          z-index: 3;
+          cursor: pointer;
+          right: 10%;
+          top: 47.5px;
+          transition: opacity 0.5s;
+  
+          svg path {
+            stroke: $white;
+            stroke-width: 1.5;
+          }
+  
+          &[aria-expanded] path {
+            transition: d 0.25s;
+          }
+        }
+
+        .nav {
+          padding: 0;
+          margin: 0;
+          margin-top: 104px;
+          width: 100%;
+          position: absolute;
+          height: 570px;
+          flex-direction: column;
+          background-color: $blue;
+          clip-path: circle(100px at 90% -40%);
+          -webkit-clip-path: circle(100px at 90% -40%);
+          transition: all 1s ease-out;
+          z-index: 2;
+          pointer-events: none;
+          align-items: center;
+          justify-content: space-around;
+  
+          &.open {
+            clip-path: circle(1200px at 90% -40%);
+            -webkit-clip-path: circle(1500px at 90% -40%);
+            pointer-events: all;
+          }
+          
+          .nav-link {
+            color: $white;
+          }
+        }
+      }
+      
+      .right__img {
+        position: unset;
+        background-image: url("../img/cover@2x.png");
+        width: 100%;
+        height: 30vw;
+        min-height: 249.5px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .right__text {
+        background-color: $white;
+        padding-left: 2.9375rem;
+        position: relative;
+        top: -66.5px;
+        width: 75vw;
+
+        h1 {
+          position: unset;
+          color: $dark-grey;
+          width: 80%;
+          font-size: calc(1.5625rem + 1.5vw);
+          padding-top: 2.9375rem;
+          margin: 0;
+        }
+  
+        p{
+          position: unset;
+          width: 90%;
+          box-sizing: unset;
+          color: $dark_grey;
+          padding: 1.4375em 2.25em 2.4375em 0;
+        }
+      }
+
+      .right__more {
+        flex-direction: row;
+        bottom: 39.5px;
+        right: 39.8px;
+        width: 138.1px;
+        height: 21px;
+        justify-content: space-between;
+        align-items: baseline;
+  
+        span {
+          transform: rotate(0deg);
+          color: $dark_grey;
+        }
+  
+        svg{
+          width: 10.6px;
+          height: 15.08px;
+          position: relative;
+  
+          path {
+            fill: $dark_grey;
+            stroke: none;
+          }
+        }
+      }
+    }
+  }
+}

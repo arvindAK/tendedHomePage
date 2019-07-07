@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap");
+
+$blue: #005fcc;
+$white: #ffffff;
+$grey: #f3f4fb;
+
+* {
+  padding: 0;
+  margin: 0;
+  color: $white;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+  &__left {
+    width: 40vw;
+    background-color: $grey;
+
+    .left__logo {
+      width: 182px;
+      height: 61px;
+      margin: 6.8vh 0 4.6vh 9.4vw;
+      transition: opacity 0.5s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    .left__cover {
+      width: 52vw;
+      height: 66.7%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__right {
+    background-color: $blue;
+    width: 60vw;
+    position: relative;
+
+    nav {
+      .nav__logo {
+        display: none;
+      }
+
+      .hamburger {
+        background: transparent;
+        border: none;
+        display: none;
+      }
+
+      .nav {
+        padding-top: 6.8vh;
+        width: 50%;
+        margin-left: 28%;
+        justify-content: space-between;
+
+        a {
+          color: $white;
+          font-size: 1.125rem;
+          transition: opacity 0.5s;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+
+    .right__img {
+      position: absolute;
+      background-image: url("../img/Path.svg");
+      left: 20%;
+      top: 25.2%;
+      width: 369px;
+      height: 369px;
+    }
+
+    h1 {
+      position: absolute;
+      width: 458px;
+      left: 34%;
+      top: 37.9%;
+      text-align: left;
+      line-height: 1.3;
+      font-weight: 500;
+      font-size: 3.4rem;
+    }
+
+    p {
+      width: 395px;
+      position: absolute;
+      bottom: 11.6%;
+      text-align: left;
+      left: 34%;
+      margin-bottom: 0;
+      color: $grey;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+
+    .right__more {
+      text-decoration: none;
+      position: absolute;
+      right: calc(10% - 1.5vw);
+      bottom: 5%;
+      width: 15px;
+      display: flex;
+      flex-direction: column;
+      transition: opacity 0.5s;
+
+      &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
+
+      span {
+        display: inline-block;
+        white-space: nowrap;
+        transform: rotate(270deg);
+        color: $grey;
+        font-weight: 300;
+        margin-bottom: 1em;
+      }
+
+      svg {
+        width: 17.455px;
+        height: 24.402px;
+      }
+    }
+  }
+}
