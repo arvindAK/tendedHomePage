@@ -27,7 +27,6 @@ function scssTask() {
     .pipe(browserSync.stream());
 }
 
-
 function jsTask() {
   return src(files.jsPath)
     .pipe(concat("script.js"))
